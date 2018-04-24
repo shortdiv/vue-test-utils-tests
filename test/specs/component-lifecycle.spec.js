@@ -3,10 +3,21 @@ import ComponentWithLifecycle from '../utils/componentWithLifecycle'
 
 describe('component with lifecycle', () => {
   it('should call updated when data is set', () => {
-    const wrapper = mount(ComponentWithLifecycle)
-    wrapper.setData({
-      name: 'Evan You'
+    const mockCallback = jest.fn()
+    const Template = {
+      template: `<div>{{ name }}</div>`,
+      data () {
+        return {
+          name: 'evan'
+        }
+      },
+      updated () {
+        mockCallback
+      }
+    }
+    const wrapper = mount(ComponentWithLifecycle, {
+      propsData: { updateEvent: mockCallback }
     })
-    expect(wrapper.vm.updated).toBe(true)
+    expect(mockCallback).toHaveBeenCalled()
   })
 })

@@ -3,6 +3,7 @@ export default {
   template: `
     <div>{{ name }}</div>
   `,
+  props: ['updateEvent'],
   data () {
     return {
       name: 'evan',
@@ -10,6 +11,6 @@ export default {
     }
   },
   updated () {
-    this.updated = true
+    this.$props.updateEvent()
   }
 }
