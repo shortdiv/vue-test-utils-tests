@@ -3,13 +3,13 @@ export default {
   template: `
     <div>{{ name }}</div>
   `,
+  props: ['updateEvent'],
   data () {
     return {
       name: 'evan',
-      updated: false
     }
   },
   updated () {
-    this.updated = true
+    this.$props.UpdateEvent
   }
 }
