@@ -10,6 +10,8 @@ export default {
     }
   },
   updated () {
-    this.$props.updateEvent
+    this.$nextTick(() => {
+      this.$props.updateEvent
+    })
   }
 }
