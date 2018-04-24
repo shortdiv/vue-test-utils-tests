@@ -7,6 +7,9 @@ describe('component with lifecycle', () => {
     const wrapper = mount(ComponentWithLifecycle, {
       propsData: { updateEvent: mockCallback }
     })
+    wrapper.setData({
+      name: 'Evan You'
+    })
     expect(mockCallback).toHaveBeenCalled()
   })
 })
