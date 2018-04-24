@@ -10,6 +10,6 @@ export default {
     }
   },
   updated () {
-    this.$props.UpdateEvent
+    this.$props.updateEvent
   }
 }
