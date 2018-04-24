@@ -8,9 +8,8 @@ describe('component with lifecycle', () => {
     const wrapper = mount(ComponentWithLifecycle, {
       propsData: { updateEvent }
     })
-    wrapper.setData({
-      name: 'Evan You'
-    })
+    wrapper.vm.$set(wrapper.vm, 'name', 'Evan You')
+    expect(wrapper.vm.name).toBe('Evan You')
     expect(updateEvent.called).toBe(true)
   })
 })
