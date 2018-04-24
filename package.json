@@ -1,0 +1,34 @@
+{
+  "name": "vue-test-utils-tests",
+  "version": "1.0.0",
+  "dependencies": {
+    "vue": "^2.4.4"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.13",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^21.2.1",
+    "regenerator-runtime": "^0.11.0",
+    "sinon": "^4.5.0",
+    "vue-jest": "^2.5.0",
+    "vue-template-compiler": "^2.4.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    }
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Divya Sasidharan",
+  "license": "MIT"
+}
